@@ -14,6 +14,7 @@ var app = angular.module('app', ['ngRoute'])
 
   $scope.deleteRecipe = function(recipe, $index){
     dataService.deleteRecipe(recipe);
+    console.log(recipe);
     $scope.recipes.splice($index, 1);
   };
 
@@ -64,15 +65,15 @@ var app = angular.module('app', ['ngRoute'])
   dataService.getID(function(resp){
     $scope.recipe = resp.data;
   })
-
+  //object when user adds a new recipe
   $scope.newRecipe = function(){
       $scope.recipe = {};
       $scope.recipe.ingredients =[];
       $scope.recipe.steps = [];
   };
 
+  //save recipe
   $scope.save = function(recipe){
-    console.log(recipe);
     dataService.saveRecipe(recipe);
     $location.path('/');
   }  
@@ -120,11 +121,11 @@ var app = angular.module('app', ['ngRoute'])
     }
     
     this.saveRecipe = function(recipe){
-      if(recipe._id == undefined){
-        console.log(recipe._id)
+      if(recipe._id == undefined){//if recipe is new
+        //console.log(recipe._id)
         $http.post('/api/recipes', recipe);
         console.log('saved');
-      }else{
+      }else{//if user is editing a recipe
         $http.put('/api/recipes/'+ recipe._id, recipe);
         console.log('edited');
       }
