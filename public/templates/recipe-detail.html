@@ -1,17 +1,17 @@
-<div class="grid-100 row controls">
+<div class="grid-100 row controls" ng-init="newRecipe()">
   <div class="grid-50">
     <!-- TODO Add a binding expression to display the recipe name 
       when editing a recipe. When adding a recipe, display the 
       static text 'Add New Recipe'. -->
-    <h2 ng-hide="recipe !== undefined">Add/Edit Recipe</h2>
+    <h2 ng-hide="recipe.name !== undefined">Add/Edit Recipe</h2>
     <h2>{{recipe.name}}</h2>
   </div>
   <div class="grid-50">
     <div class="flush-right">
       <!-- TODO Add directives to both the "Save Recipe" and "Cancel"
         buttons in order to handle user clicks. -->
-      <button>Save Recipe</button>
-      <button class="secondary">Cancel</button>
+      <button ng-click="save(recipe)">Save Recipe</button>
+      <button ng-click="cancel()"class="secondary">Cancel</button>
     </div>
   </div>
 </div>
@@ -94,7 +94,7 @@
     <p>
       <!-- TODO Add a directive to this input element to bind its value 
         to the recipe model's `prepTime` property. -->
-      <input ng-model="recipe.prepTime" type="number">
+      <input ng-model="recipe.prepTime" type="text">
     </p>
   </div>
 </div>
@@ -110,7 +110,7 @@
     <p>
       <!-- TODO Add a directive to this input element to bind its value 
         to the recipe model's `cookTime` property. -->
-      <input ng-model="recipe.cookTime" type="number">
+      <input ng-model="recipe.cookTime" type="text">
     </p>
   </div>
 </div>
@@ -179,7 +179,7 @@
     <p>
       <!-- TODO Add a directive to this button in order to handle 
         when the user clicks to add a new recipe ingredient. -->
-      <button ng-click="add()">+ Add Another Ingredient</button>
+      <button ng-click="addIngredient()">+ Add Another Ingredient</button>
     </p>
   </div>
 
