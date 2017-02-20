@@ -19,15 +19,16 @@
 
 <!-- TODO Add a directive to this div element so that it only displays
   when there are validation messages to display. -->
-<div class="grid-100 row">
+<div class="grid-100 row" ng-show="errorCheck()">
   <div class="grid-100">
     <p><i>The following errors were found:</i></p>
     <ul class="validation-errors">
       <!-- TODO Add a directive to this li element so that it repeats
         for each validation message that there is to display -->
-      <li>
-        <!-- TODO Add a binding expression to display the validation user message. -->
-      </li>
+      <li ng-repeat="error in catError">{{error.userMessage}}</li>
+      <li ng-repeat="error in cookTimeError">{{error.userMessage}}</li>
+      <li ng-repeat="error in descError">{{error.userMessage}}</li>
+      <li ng-repeat="error in prepError">{{error.userMessage}}</li>
     </ul>
   </div>
 </div>
@@ -59,7 +60,7 @@
     <p>
       <!-- TODO Add a directive to this textarea element to bind its content 
         to the recipe model's `description` property. -->
-      <textarea ng-model="recipe.description"></textarea>
+      <textarea ng-model="recipe.description" requried></textarea>
     </p>
   </div>
 </div>

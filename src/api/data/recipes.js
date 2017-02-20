@@ -5,8 +5,8 @@ var recipes = [
     name: 'Simple Beef Stew',
     description: 'This is the recipe from when I was in college.',
     category: 'Soup',
-    prepTime: 20,
-    cookTime: 145,
+    prepTime: '20',
+    cookTime: '145',
     ingredients: [
       {
         foodItem: 'Beef',
@@ -51,8 +51,8 @@ var recipes = [
     name: 'Homemade Waffles',
     description: 'This is the recipe for my grandma\'s homemade waffles.',
     category: 'Entree',
-    prepTime: 20,
-    cookTime: 10,
+    prepTime: '20',
+    cookTime: '10',
     ingredients: [
       {
         foodItem: 'Flour',
@@ -85,8 +85,8 @@ var recipes = [
     name: 'Cabbage Salad',
     description: 'Simple, light and tasty cabbage salad.',
     category: 'Salad',
-    prepTime: 10,
-    cookTime: 60,
+    prepTime: '10',
+    cookTime: '60',
     ingredients: [
       {
         foodItem: 'Cabbage',
@@ -128,8 +128,8 @@ var recipes = [
     name: 'Grilled Steak',
     description: 'Simple and tasty meat dish.',
     category: 'Entree',
-    prepTime: 65,
-    cookTime: 10,
+    prepTime: '65',
+    cookTime: '10',
     ingredients: [
       {
         foodItem: 'Steak',
@@ -166,8 +166,8 @@ var recipes = [
     name: 'Stone Soup',
     description: 'This is the recipe for when you are camping and have nothing but rocks.',
     category: 'Soup',
-    prepTime: 20,
-    cookTime: 145,
+    prepTime: '20',
+    cookTime: '145',
     ingredients: [
       {
         foodItem: 'Stones',
@@ -203,8 +203,8 @@ var recipes = [
     name: 'Lemonde',
     description: 'Refreshing summer-time drink.',
     category: 'Beverage',
-    prepTime: 20,
-    cookTime: 0,
+    prepTime: '20',
+    cookTime: '0',
     ingredients: [
       {
         foodItem: 'Lemons',
@@ -248,8 +248,8 @@ var recipes = [
     name: 'Grilled Cheese Sandwich',
     description: 'Quick to prepare and delicious chees sandwiches.',
     category: 'Appetizer/Snack',
-    prepTime: 10,
-    cookTime: 7,
+    prepTime: '10',
+    cookTime: '7',
     ingredients: [
       {
         foodItem: 'Cheese',

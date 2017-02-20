@@ -4,27 +4,27 @@ var express = require('express');
 // define recipe model
 var recipeFields = {
   name: {
-    required: false,
+    required: true,
     dataType: 'string',
     displayName: 'Name'
   },
   description: {
-    required: false,
+    required: true,
     dataType: 'string',
     displayName: 'Description'
   },
   category: {
-    required: false,
+    required: true,
     dataType: 'string',
     displayName: 'Category'
   },
   prepTime: {
-    required: false,
+    required: true,
     dataType: 'string',
     displayName: 'Prep Time'
   },
   cookTime: {
-    required: false,
+    required: true,
     dataType: 'string',
     displayName: 'Cook Time'
   },
